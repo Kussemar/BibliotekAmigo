@@ -20,21 +20,19 @@ public class BibliotekMapper {
 
         List<Bog> bogList = new ArrayList<>();
 
-        String sql = "SELECT * FROM member_view;"; // TODO
+        String sql = "SELECT * FROM laaner\n" +
+                "where laaner_id = 1;";
 
         try (Connection connection = database.connect()) {
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()) {
-                    int memberId = rs.getInt("member_id");
-                    String name = rs.getString("name");
-                    String address = rs.getString("address");
-                    int zip = rs.getInt("zip");
-                    String city = rs.getString("city");
-                    String gender = rs.getString("gender");
-                    int year = rs.getInt("year");
+                    int bogId = rs.getInt("bog_id");
+                    String titel = rs.getString("titel");
+                    int udgivelsesaar = rs.getInt("udgivelsesaar");
+                    int forfatterId = rs.getInt("forfatterId");
 
-                    bogList.add(new Bog(memberId, name, address, zip, city, gender, year));
+                    bogList.add(new Bog(bogId, titel, udgivelsesaar, forfatterId));
                 }
             } catch (SQLException throwables) {
                 // TODO: Make own throwable exception and let it bubble upwards
