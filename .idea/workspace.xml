@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae4618ed-073a-4ed4-8637-2a08221edd63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dat/MainSupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Borrower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dat/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dat/MainSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dat/MainSupport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Bog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Bog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/persistence/BibliotekMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/BibliotekMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

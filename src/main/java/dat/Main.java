@@ -1,6 +1,7 @@
 package dat;
 
 import entities.Bog;
+import entities.Borrower;
 import persistence.BibliotekMapper;
 import persistence.Database;
 
@@ -15,9 +16,10 @@ public class Main {
 
         Database db = new Database(USER, PASSWORD, URL);
         BibliotekMapper bibliotekMapper = new BibliotekMapper(db);
-        List<Bog> bog = bibliotekMapper.findBorrower();
+        Borrower laaner = bibliotekMapper.findBorrower(1);
 
         MainSupport ms = new MainSupport();
-        ms.showBorrowerWithSpecificId(bog);
+        ms.showBorrowerWithSpecificId(laaner);
+        ms.findAllBorrowersAndShowTheirData(db);
     }
 }

@@ -1,24 +1,24 @@
 package entities;
 
 public class Bog {
-    private int bog_id;
+    private int bogId;
     private String titel;
     private int udgivelsesaar;
     private int forfatterId;
 
-    public Bog(int bog_id, String titel, int udgivelsesaar, int forfatterId) {
-        this.bog_id = bog_id;
+    public Bog(int bogId, String titel, int udgivelsesaar, int forfatterId) {
+        this.bogId = bogId;
         this.titel = titel;
         this.udgivelsesaar = udgivelsesaar;
         this.forfatterId = forfatterId;
     }
 
-    public int getBog_id() {
-        return bog_id;
+    public int getBogId() {
+        return bogId;
     }
 
-    public void setBog_id(int bog_id) {
-        this.bog_id = bog_id;
+    public void setBogId(int bogId) {
+        this.bogId = bogId;
     }
 
     public String getTitel() {
@@ -48,7 +48,7 @@ public class Bog {
     @Override
     public String toString() {
         return "Bog{" +
-                "bog_id=" + bog_id +
+                "bogId=" + bogId +
                 ", titel='" + titel + '\'' +
                 ", udgivelsesaar=" + udgivelsesaar +
                 ", forfatterId=" + forfatterId +
