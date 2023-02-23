@@ -21,5 +21,6 @@ public class Main {
         MainSupport ms = new MainSupport();
         ms.showBorrowerWithSpecificId(laaner);
         ms.findAllBorrowersAndShowTheirData(db);
+        ms.findAllBooksAndTheirAuthors(db);
     }
 }

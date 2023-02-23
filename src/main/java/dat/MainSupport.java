@@ -19,4 +19,11 @@ public class MainSupport {
             System.out.println(b);
         }
     }
+
+    public void findAllBooksAndTheirAuthors(Database db){
+        System.out.println("*** Find alle bøger, og deres forfattere ***");
+        for (Bog b: new BibliotekMapper(db).findAllBooksAndAuthors()) {
+            System.out.println(b);
+        }
+    }
 }

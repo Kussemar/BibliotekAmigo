@@ -76,4 +76,33 @@ public class BibliotekMapper {
         return borrowerList;
     }
 
+    public List<Bog> findAllBooksAndAuthors() {
+
+        List<Bog> booksAndAuthorsList = new ArrayList<>();
+
+        String sql = "select * from bog\n" +
+                "inner join forfatter f\n" +
+                "using(forfatter_id);";
+
+        try (Connection connection = database.connect()) {
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()) {
+                    int authorId = rs.getInt("forfatter_id");
+                    int bogId = rs.getInt("bog_id");
+                    String title = rs.getString("titel");
+                    int releaseYear = rs.getInt("udgivelsesaar");
+                    String authorName = rs.getString("navn");
+                    booksAndAuthorsList.add(new Bog(bogId,title,releaseYear,authorId,authorName));
+                }
+            } catch (SQLException throwables) {
+                // TODO: Make own throwable exception and let it bubble upwards
+                throwables.printStackTrace();
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return booksAndAuthorsList;
+    }
+
 }

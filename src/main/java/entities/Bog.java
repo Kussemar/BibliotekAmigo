@@ -5,12 +5,29 @@ public class Bog {
     private String titel;
     private int udgivelsesaar;
     private int forfatterId;
+    private String name;
 
     public Bog(int bogId, String titel, int udgivelsesaar, int forfatterId) {
         this.bogId = bogId;
         this.titel = titel;
         this.udgivelsesaar = udgivelsesaar;
         this.forfatterId = forfatterId;
+    }
+
+    public Bog(int bogId, String titel, int udgivelsesaar, int forfatterId, String name) {
+        this.bogId = bogId;
+        this.titel = titel;
+        this.udgivelsesaar = udgivelsesaar;
+        this.forfatterId = forfatterId;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getBogId() {
@@ -52,6 +69,7 @@ public class Bog {
                 ", titel='" + titel + '\'' +
                 ", udgivelsesaar=" + udgivelsesaar +
                 ", forfatterId=" + forfatterId +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
